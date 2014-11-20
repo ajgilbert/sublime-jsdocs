@@ -1307,6 +1307,13 @@ class JsdocsWrapLines(sublime_plugin.TextCommand):
         text = re.sub("\n(\\s*\\*\\s*\n)+", "\n\n", text)
 
         def wrapPara(para):
+            org = re.sub("(\n|^)\\s*\\*", "", para)
+            print(org)
+            if len(org) > 0 and org[:2] == '  ':
+                return {'text':       re.sub("(\n|^)\\s*\\*", "\n *", para),
+                        'lineTagged': False,
+                        'tagged':     False,
+                        'tag':        ""}
             para = re.sub("(\n|^)\\s*\\*\\s*", " ", para)
 
             # split the paragraph into words

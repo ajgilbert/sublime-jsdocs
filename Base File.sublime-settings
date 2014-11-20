@@ -85,7 +85,7 @@
   //  * @param  {Number} bar
   //  * @return {[Type]}
   //  */
-  "jsdocs_spacer_between_sections": false,
+  "jsdocs_spacer_between_sections": true,
 
   // Whether each section should be indented to the same level, or indent each one individually.
   // (When true, the @param section will lose the extra space immediately after each '@param').
