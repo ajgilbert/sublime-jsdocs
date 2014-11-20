@@ -1308,7 +1308,6 @@ class JsdocsWrapLines(sublime_plugin.TextCommand):
 
         def wrapPara(para):
             org = re.sub("(\n|^)\\s*\\*", "", para)
-            print(org)
             if len(org) > 0 and org[:2] == '  ':
                 return {'text':       re.sub("(\n|^)\\s*\\*", "\n *", para),
                         'lineTagged': False,
